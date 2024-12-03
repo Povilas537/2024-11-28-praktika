@@ -1,0 +1,173 @@
+.button {
+  display: flex;
+  background-color: green;
+  justify-content: space-between;
+  width: 80%;
+  padding: 27px 22px 26px 22px;
+}
+.button a {
+  text-decoration: none;
+  color: white;
+}
+
+*, ::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+body .navigation {
+  display: flex;
+  margin-top: 50px;
+}
+body .navigation .left {
+  width: 50%;
+  display: flex;
+  gap: 12px;
+}
+body .navigation .left img {
+  align-items: center;
+}
+body .navigation .right {
+  width: 50%;
+  display: flex;
+  gap: 48px;
+  justify-content: end;
+  align-items: center;
+}
+body .navigation .right div a {
+  text-decoration: none;
+  color: black;
+}
+body .navigation .right .highlighted a {
+  color: antiquewhite;
+  padding: 10px 15px;
+  background-color: green;
+  border-radius: 3px;
+}
+body .cta {
+  display: flex;
+  align-items: center;
+}
+body .cta .cta-text {
+  width: 40%;
+}
+body .cta .cta-image {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+body .section-3 {
+  display: flex;
+  gap: 10%;
+}
+body .section-3 .description {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+body .section-3 .travel-options {
+  display: flex;
+  flex-wrap: wrap;
+  width: 55%;
+}
+body .section-3 .travel-options .option {
+  width: 40%;
+  padding: 40px 30px 44px 40px;
+}
+body .section-4 {
+  display: flex;
+  flex-direction: column;
+}
+body .section-4 .titles {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+body .section-4 .elements-wrapper {
+  display: flex;
+  justify-content: center;
+}
+body .section-4 .elements-wrapper .element {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 78px 50px 72px 50px;
+}
+body .section-4 .elements-wrapper .element img {
+  width: 64px;
+  height: 64px;
+}
+body .section-5 {
+  display: flex;
+}
+body .section-5 .image {
+  width: 50%;
+}
+body .section-5 .text {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .section-6 {
+  display: flex;
+  flex-direction: column;
+}
+body .section-6 .group-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+body .section-6 .group-wrapper .element-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+body .section-6 .group-wrapper .person-wrapper {
+  display: flex;
+}
+body .section-6 .group-wrapper .person-wrapper .image-wrapper {
+  width: 50%;
+}
+body .section-6 .group-wrapper .person-wrapper .name-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+body .section-6 .group-wrapper .p-description {
+  width: 80%;
+}
+body .footer {
+  display: flex;
+}
+body .footer .footer-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 20%;
+}
+body .footer .footer-1 .element-logo {
+  display: flex;
+  gap: 12px;
+}
+body .footer .footer-1 .element-social {
+  display: flex;
+}
+body .footer-2 {
+  display: flex;
+}
+body .footer-2 .column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body .footer-3 {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

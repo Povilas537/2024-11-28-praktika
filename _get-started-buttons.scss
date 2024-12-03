@@ -1,0 +1,12 @@
+.button{
+    display: flex;
+    background-color: green;
+    justify-content: space-between;
+    width: 80%;
+    padding: 27px 22px 26px 22px;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
