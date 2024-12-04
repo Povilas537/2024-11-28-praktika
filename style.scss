@@ -1,24 +1,32 @@
 
 @use 'get-started-buttons';
-
+@use 'titles';
+@use 'font';
+@use 'colors' as c;
+@use 'responsive' as r;
 
 *,::before, *::after {
     box-sizing: border-box;
     
 }
 body{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1440px;
+    margin: 0%;
     .navigation{
         display: flex;
         margin-top: 50px;
+        max-width: 1160px;
+        margin-bottom: 140px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
         .left{
             width: 50%;
             display: flex;
             gap: 12px;
             img{
                 align-items: center;
+                width: 20%;
                 
             }
         }
@@ -33,40 +41,79 @@ body{
             
                 a{
                     text-decoration: none;
-                    color: black;
+                    color: c.$title-black
                 }
             }
             .highlighted{
                 
                 a{
-                    color: antiquewhite;
+                    color: c.$text-secondary;
                     padding: 10px 15px;
-                    background-color: green;
+                    background: c.$primary-button; // Use the variable
                     border-radius: 3px;
                 }
             }
+            @include r.lg{
+                gap: 20px;
+            }
         }
     }
-    .cta{
-        display: flex;
-        align-items: center;
-        .cta-text{
-            width: 40%;
-        }
-        .cta-image{
-            width: 60%;
+    .cta-wrapper{
+        background-image: url(images/cta-corner-bg.png);
+        background-position: 0px 400px;
+        background-repeat: no-repeat;
+        .cta{
             display: flex;
-            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1060px;
+            margin-bottom: 120px;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: url(images/cta-text-bg.png);
+            background-position: 325px 264px;
+            background-repeat: no-repeat;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            
+            .cta-text{
+                width: 40%;
+                @include r.lg{
+                    width: 60%;
+                }
+            }
+            .cta-image{
+                width: 60%;
+                display: flex;
+                justify-content: end;
+                @include r.lg{
+                    width: 40%;
+                }
+                
+                
+
+
+            }
         }
     }
 
     .section-3{
         display: flex;
         gap: 10%;
+        max-width: 1160px;
+        margin-bottom: 130px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
         .description{
             width: 45%;
             display: flex;
             flex-direction: column;
+            @include r.lg{
+                width: 100%;
+            }
         }
         .travel-options{
             display: flex;
@@ -75,14 +122,42 @@ body{
             .option{
                 width: 40%;
                 padding: 40px 30px 44px 40px;
+                .image-green{
+                    img{
+                        background-color: c.$color-primary;
+                    }
+                }
+                img{
+                    padding: 10px;
+                    border-radius: 8px;
+                }
+                @include r.sxl{
+                    width: 50%;
+                }
+                @include r.lg{
+                    width: 40%;
+                }
+            }
+            @include r.lg{
+                width: 100%;
+                
             }
         }
-
+        @include r.lg{
+            flex-direction: column;
+            gap: 50px;
+        }
     }
 
     .section-4{
         display: flex;
         flex-direction: column;
+        max-width: 1160px;
+        margin-bottom: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
         .titles{
             display: flex;
             justify-content: center;
@@ -91,31 +166,78 @@ body{
         }
         .elements-wrapper{
             display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            @include r.lg{
+                
+            }
             .element{
                 width: 30%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 padding: 78px 50px 72px 50px;
+                
                 img{
                     width: 64px;
                     height: 64px;
                 }
+                @include r.lg{
+                    width: 80%;
+                }
+            }
+            .element-green{
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 78px 50px 72px 50px;
+                background-color: c.$color-primary;
+                color: c.$text-secondary;
+                border-radius: 10px;
+                img{
+                    width: 64px;
+                    height: 64px;
+                }
+                @include r.lg{
+                    width: 80%;
+                    
+                }
             }
         }
+
     }
 
     .section-5{
         display: flex;
+        gap: 100px;
+        
+        max-width: 1160px;
+        margin-bottom: 140px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        @include r.lg{
+            flex-direction: column;
+            gap: 50px;
+            
+        }
+
         .image{
             width: 50%;
+            @include r.lg{
+                width: 80%;
+            }
         }
         .text{
-            width: 35%;
+            width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include r.lg{
+                width: 80%;
+            }
             
         }
     }
@@ -123,18 +245,30 @@ body{
     .section-6{
         display: flex;
         flex-direction: column;
+        max-width: 1160px;
+        margin-bottom: 170px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
         .titles{
 
         }
         .group-wrapper{
             display: flex;
             gap: 20px;
-            justify-content: center;
+            @include r.lg{
+                gap: 10px;
+            }
+            
 
             .element-wrapper{
                 display: flex;
                 flex-direction: column;
                 width: 25%;
+                @include r.lg{
+                    width: 33%;
+                }
             }
             
                 .person-wrapper{
@@ -151,42 +285,105 @@ body{
                         display: flex;
                         flex-direction: column;
                         width: 50%;
+                        .bold{
+                            color: c.$title-black;
+                        }
                     }
                 }
                 .p-description{
                     width: 80%;
                 }
         }
+        @include r.lg{
+            
+        }
     }
-
-    .footer{
-        display: flex;
-        .footer-1{
+    .footer-container{
+        background-color: c.$footer;
+        width: 100%;
+        .footer{
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 20%;
-            .element-logo{
+            
+            max-width: 1160px;
+            margin: auto;
+            justify-content: space-around;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-left: 20px;
+            padding-right: 20px;
+            @include r.lg{
+                flex-wrap: wrap;
+                justify-content: start;
+                gap: 40px;
+            }
+            .footer-1{
                 display: flex;
+                flex-direction: column;
                 gap: 12px;
+                width: 20%;
+                .element-logo{
+                    display: flex;
+                    gap: 12px;
+                    img{
+                        width: 30%;
+                    }
+                }
+                .element-social{
+                    display: flex;
+                    gap: 16px;
+                    margin-top: 8px;
+                }
+                @include r.lg{
+                    width: 30%;
+                }
             }
-            .element-social{
+        
+
+            .footer-2{
                 display: flex;
+                width: 40%;
+                justify-content: space-around;
+                .column{
+                    display: flex;
+                    flex-direction: column;
+                    gap:12px ;
+                    .element-green{
+                        margin-bottom: 12px;
+                        color: c.$color-primary;
+                    }
+                }
+                
+            }
+
+            .footer-3{
+                display: flex;
+                flex-direction: column;
+                h3{
+                    margin-top: 0%;
+                    margin-bottom: 13px;
+                    color: c.$color-primary;
+                }
+
+                    textarea{
+                        margin-bottom: 28px;
+                        padding: 12px 24px;
+                        width: 283px;
+                        height: 113px;
+                        border: none;
+                        border-radius: 5px;
+                        resize: none;
+                    }
+                
+                button{
+                    background: c.$primary-button;
+                    padding: 22px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: c.$text-secondary;
+                    border: none;
+                }
             }
         }
-    }
-
-    .footer-2{
-        display: flex;
-        .column{
-            display: flex;
-            flex-direction: column;
-            gap:12px ;
-        }
-    }
-
-    .footer-3{
-        display: flex;
-        flex-direction: column;
     }
 }

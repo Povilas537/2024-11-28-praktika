@@ -1,12 +1,22 @@
 .button{
-    display: flex;
-    background-color: green;
-    justify-content: space-between;
-    width: 80%;
-    padding: 27px 22px 26px 22px;
 
     a{
         text-decoration: none;
         color: white;
+        display: flex;
+        background-color: green;
+        justify-content: space-between;
+        width: 80%;
+        padding: 27px 22px 26px 22px;
+        background: linear-gradient(to left, #74976b, #647B64);
+        color: white;
+        border: none;
+        border-radius: 2px;
+        margin-top: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        
     }
 }
